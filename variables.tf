@@ -19,6 +19,9 @@ variable "compute_type" {
 
 variable "packer_ami_name" {}
 variable "packer_source_ami" {}
-variable "packer_source_ami_owner" {}
+variable "packer_source_ami_owner" {
+  type = "string"
+  default = "self"
+}
 variable "packer_vpc" {}
 variable "packer_subnet" {}
