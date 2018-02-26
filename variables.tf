@@ -1,7 +1,9 @@
 variable "name" {}
-variable "description" {}
+variable "description" {
+  type = "string"
+  default = ""
+}
 
-variable "arn" {}
 variable "timeout" {
   type = "string"
   default = "10"

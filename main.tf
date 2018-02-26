@@ -91,7 +91,7 @@ resource "aws_codebuild_project" "packer" {
   name = "${var.name}"
   description = "${var.description}"
   build_timeout  = "${var.timeout}"
-  service_role = "${var.arn}"
+  service_role = "${aws_iam_role.codebuild.arn}"
 
   artifacts {
     type = "CODEPIPELINE"
