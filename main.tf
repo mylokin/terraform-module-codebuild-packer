@@ -18,7 +18,7 @@ EOF
 }
 
 resource "aws_iam_policy" "codebuild_packer" {
-  name = "codebuild_packer"
+  name = "codebuild_packer_${var.name}"
   path = "/service-role/"
   description = "Policy used in trust relationship with CodeBuild"
 
@@ -81,7 +81,7 @@ POLICY
 }
 
 resource "aws_iam_policy_attachment" "codebuild_policy_attachment" {
-  name = "codebuild_packer_policy_attachment"
+  name = "policy_attachment_codebuild_packer_${var.name}"
   policy_arn = "${aws_iam_policy.codebuild_packer.arn}"
   roles = ["${aws_iam_role.codebuild.id}"]
 }
