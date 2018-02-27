@@ -38,6 +38,15 @@ resource "aws_iam_policy" "codebuild_packer" {
       ]
     },
     {
+      "Effect":"Allow",
+      "Action": [
+        "s3:*"
+      ],
+      "Resource": [
+        "*"
+      ]
+    },
+    {
       "Effect": "Allow",
       "Action": [
         "ec2:AttachVolume",
