@@ -130,5 +130,6 @@ resource "aws_codebuild_project" "packer" {
 
   source {
     type = "CODEPIPELINE"
+    buildspec = "${var.buildspec}"
   }
 }

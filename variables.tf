@@ -4,6 +4,11 @@ variable "description" {
   default = ""
 }
 
+variable "buildspec" {
+  type = "string"
+  default = "buildspec.yml"
+}
+
 variable "timeout" {
   type = "string"
   default = "10"
